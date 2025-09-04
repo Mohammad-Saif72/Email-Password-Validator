@@ -52,5 +52,12 @@ This project validates user input in real-time and ensures that the email and pa
 ---
 
 ## 🔹 Project Structure
+## 🔹 Screenshots
+
+![App Screenshot](image1.png)
+![App Screenshot](image2.png)
+![App Screenshot](image3.png)
+
+
 
 
