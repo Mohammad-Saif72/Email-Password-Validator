@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Email & Password Validator</title>
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Validate Email & Password</h1>
+    <p class="helper" hidden >Add your JavaScript to check patterns and show messages below.</p>
+
+    <form id="authForm" novalidate>
+      <!-- Email -->
+      <div class="group" id="emailGroup">
+        <label for="email">Email</label>
+        <div class="input-wrap">
+          <input
+            id="email"
+            name="email"
+            type="email"
+            inputmode="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+            aria-describedby="emailMsg emailHint"
+          />
+        </div>
+        <small id="emailMsg" class="msg" role="alert">Please enter a valid email.</small>
+        <small id="emailHint" class="hint">Looks good ✔</small>
+      </div>
+
+      <!-- Password -->
+      <div class="group" id="passwordGroup">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="At least 8 chars"
+            autocomplete="new-password"
+            required
+            minlength="8"
+            aria-describedby="passwordMsg passwordHint"
+          />
+        </div>
+        <small id="passwordMsg" class="msg" role="alert">
+          Use 8+ chars with letters, numbers, and a symbol.
+        </small>
+        <small id="passwordHint" class="hint">Strong password ✔</small>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="group" id="confirmGroup">
+        <label for="confirm">Confirm Password</label>
+        <div class="input-wrap">
+          <input
+            id="confirm"
+            name="confirm"
+            type="password"
+            placeholder="Re-enter password"
+            autocomplete="new-password"
+            required
+            aria-describedby="confirmMsg confirmHint"
+          />
+        </div>
+        <small id="confirmMsg" class="msg" role="alert">Passwords do not match.</small>
+        <small id="confirmHint" class="hint">Passwords match ✔</small>
+      </div>
+
+      <div class="row">
+        <small>By continuing you agree to the terms.</small>
+        <button id="submitBtn" type="submit">Validate</button>
+      </div>
+      <p id="formStatus" class="muted" aria-live="polite"></p>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
